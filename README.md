@@ -1,4 +1,4 @@
-# vue-tailwind-notification
+# vue-notify
 
 ## Project setup
 ```
