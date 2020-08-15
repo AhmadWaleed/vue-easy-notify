@@ -1,7 +1,22 @@
 {
   "name": "vue-notify",
+  "description": "Very simple and minimal vue notification plugin.",
   "version": "1.0.0",
-  "private": true,
+  "author": "Ahmed Waleed <ahmed_waleed1@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AhmadWaleed/vue-notify"
+  },
+  "keywords": [
+    "notification",
+    "vue",
+    "vue-notification",
+    "vue-notify",
+    "package",
+    "library",
+    "laravel-vue"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
