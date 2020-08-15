@@ -1,5 +1,11 @@
 # Vue-Notify
 
+<p align="center">
+  <a href="https://github.com/AhmadWaleed/vue-notify/blob/master/vue-notify-demo-gif.gif" title="Vue Simple Notify">
+    <img src="https://github.com/AhmadWaleed/vue-notify/blob/master/vue-notify-demo-gif.gif">
+  </a>
+</p>
+
 ## Introduction
 Vue Notify is very minimal and simple to use plugin available for VueJs, It comes with mixin that you can use to easily integrated your server-service notifications with vue-notify.
 
