@@ -34,7 +34,7 @@ const NotificationStore = {
 
     notify(notification) {
         if (Array.isArray(notification)) {
-            notification.forEach(n => this.addNotification(notification))
+            notification.forEach(n => this.addNotification(n))
         } else {
             this.addNotification(notification)
         }
