@@ -1,5 +1,5 @@
 {
-  "name": "vue-notify",
+  "name": "vue-easy-notify",
   "description": "Very simple and minimal vue notification plugin.",
   "version": "1.0.0",
   "author": "Ahmed Waleed <ahmed_waleed1@hotmail.com>",
@@ -21,9 +21,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib --name vue-notify ./src/plugin/index.js"
+    "build-bundle": "vue-cli-service build --target lib --name vue-easy-notify ./src/plugin/index.js"
   },
-  "main": "./dist/vue-notify.common.js",
+  "main": "./dist/vue-easy-notify.common.js",
   "files": [
     "dist/*",
     "src/*",
