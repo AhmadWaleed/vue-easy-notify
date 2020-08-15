@@ -98,7 +98,7 @@ composer require laracasts/flash
 // ... //
 public function index()
 {
-  flash->info('server side flash message.');
+  flash()->info('server side flash message.');
   
   return redirect('/home');
 }
