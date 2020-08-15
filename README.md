@@ -126,12 +126,45 @@ public function index()
 </body>
 ```
 
+add and use this plugin in your project to check laravel notifications
+```js
+// resources/js/mixins/notifications.js
+export default {
+    mounted() {
+        this.checkNotify();
+    },
+
+    methods: {
+        checkNotify() {
+            if (!flash_notification) {
+                return;
+            }
+
+            flash_notification.forEach(notification => {
+                let type = notification.level;
+
+                if (type === 'danger') {
+                    type = 'error';
+                }
+
+                this.$notify({
+                    message: notification.message,
+                    timeout: 5000,
+                    type
+                })
+            })
+        }
+    }
+}
+
+```
+
 ```js
 // resources/js/app.js
 
 import Vue from 'vue'
 import NotifyPlugin from 'vue-easy-notify'
-import NotifyMixin from 'vue-easy-notify/src/mixin/notifications'; // this mixin will automatically check server side notfications.
+import NotifyMixin from './mixins/notifications.js'; // this mixin will automatically check server side notfications.
 Vue.use(NotifyPlugin)
 
 new Vue({
