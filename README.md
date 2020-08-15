@@ -8,7 +8,7 @@ Vue Notify is very minimal and simple to use plugin available for VueJs, It come
 - [Demo](#demo)
 - [Quick Start](#quick-start)
 - [Server Side Usage](#server-side-usage)
-- [API](#apie)
+- [API](#api)
 
 ---
 
