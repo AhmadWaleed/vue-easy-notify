@@ -7,6 +7,8 @@ Vue Notify is very minimal and simple to use plugin available for VueJs, It come
 
 - [Demo](#demo)
 - [Quick Start](#quick-start)
+- [Server Side Usage](#server-side-usage)
+- [API](#apie)
 
 ---
 
@@ -50,6 +52,10 @@ Vue.notify.info("Another info message.")
 Great Now you have this cool vue-notify installed on your project..
 
 ##### Examples
+```html
+<notifications position="bottom"></notifications>
+```
+
 ```javascript
 // notify by notification type
 this.$notify.notify({
@@ -70,3 +76,77 @@ this.$notify.success('This is success messsage.');
 this.$notify.warning('This is warning messsage!');
 this.$notify.error('This is error messsage!');
 ```
+
+## Server Side Usage
+
+Below is the example how you can use vue-notify to handle laravel server side flash message and errors.
+
+Install [laracasts/flash](https://github.com/laracasts/flash) composer package.
+
+```bash
+composer require laracasts/flash
+```
+
+```php
+// ExampleController
+// ... //
+public function index()
+{
+  flash->info('server side flash message.');
+  
+  return route('home');
+}
+// ... //
+```
+
+```html
+<!-- layouts/app.blade.php -->
+<head>
+  <!-- -->
+  <script type="text/javascript">
+        var flash_notification = {!! (session()->has('flash_notification')) ? json_encode(session()->get('flash_notification')) : 'false' !!}
+  </script>
+
+  {{ session()->forget('flash_notification') }}
+  <!-- -->
+</head>
+<body>
+  <!-- -->
+  <notifications :messages="{{ collect($errors->all())->map(fn($error) => ['message' => $error, 'type' => 'error']) }}"
+                 position="bottom"
+  >
+  </notifications>
+  <!-- -->
+</body>
+```
+
+```js
+// resources/js/app.js
+
+import Vue from 'vue'
+import NotifyPlugin from 'vue-notify'
+import NotifyMixin from 'vue-notify/mixin' // this mixin will automatically check server side notfications.
+Vue.use(NotifyPlugin)
+
+new Vue({
+  el: '#app',
+  mixins: [NotifyMixin],
+  mounted() {
+    this.$notify.info('show message from client side.')
+  }
+})
+```
+
+## API
+
+### Options
+
+below are the options you can pass to notify function.
+
+**Option**|**Type's**|**Default**|**Description**
+-----|-----|-----|-----
+message|String|''|Notification message content
+type|String|'info'|Notification level <br> **['info', 'success', 'warning', 'error']**
+size|String|'sm'|Notification size <br> **['sm', 'lg']**
+timeout|Number|5000|Display time of the notification in millisecond
+showClose|Boolean|true|Show close icon on notification <br> **[true, flase]**
