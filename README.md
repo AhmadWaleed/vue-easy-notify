@@ -94,7 +94,7 @@ public function index()
 {
   flash->info('server side flash message.');
   
-  return route('home');
+  return redirect('/home');
 }
 // ... //
 ```
