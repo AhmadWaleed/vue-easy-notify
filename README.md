@@ -1,4 +1,4 @@
-# Vue-Notify
+# Vue-Easy-Notify
 
 <p align="center">
   <a href="https://github.com/AhmadWaleed/vue-notify/blob/master/vue-notify-demo-gif.gif" title="Vue Simple Notify">
@@ -29,7 +29,7 @@ Vue Notify is very minimal and simple to use plugin available for VueJs, It come
 Install the package:
 
 ```bash
-npm install vue-notify
+npm install vue-easy-notify
 ```
 
 Register the plugin:
@@ -131,7 +131,7 @@ public function index()
 
 import Vue from 'vue'
 import NotifyPlugin from 'vue-notify'
-import NotifyMixin from 'vue-notify/mixin' // this mixin will automatically check server side notfications.
+import NotifyMixin from 'vue-easy-notify/src/mixin/notifications'; // this mixin will automatically check server side notfications.
 Vue.use(NotifyPlugin)
 
 new Vue({
