@@ -11,7 +11,8 @@ export default {
         this.settings = Object.assign(this.settings, options)
     },
 
-    resetOptions() {
+    reset() {
+        this.state = [];
         this.settings = {
             type: 'info',
             timeout: 5000,
@@ -36,10 +37,6 @@ export default {
         if (index !== -1) {
             this.state.splice(index, 1);
         }
-    },
-
-    removeAllNotifications() {
-        this.state = [];
     },
 
     notify(notification) {

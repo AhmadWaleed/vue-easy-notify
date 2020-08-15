@@ -3,8 +3,7 @@ import store from '../../src/plugin/store'
 describe('Test Notifications Store', () => {
 
   afterEach(() => {
-    store.resetOptions();
-    store.removeAllNotifications();
+    store.reset();
   });
 
   it('add message to store', () => {
@@ -52,13 +51,13 @@ describe('Test Notifications Store', () => {
     expect(store.state.length).toEqual(0)
   })
 
-  it('removes all notification from store', () => {
+  it('resets notification store', () => {
     store.addNotification('test message 1.')
     store.addNotification('test message 2.')
 
     expect(store.state.length).toEqual(2)
 
-    store.removeAllNotifications()
+    store.reset()
 
     expect(store.state.length).toEqual(0)
   })
