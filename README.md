@@ -36,7 +36,7 @@ Register the plugin:
 
 ```js
 import Vue from 'vue'
-import NotifyPlugin from 'vue-notify'
+import NotifyPlugin from 'vue-easy-notify'
 
 Vue.use(NotifyPlugin)
 ```
@@ -55,7 +55,7 @@ this.$notify.info("This is info message.")
 Vue.notify.info("Another info message.")
 ```
 
-Great Now you have this cool vue-notify installed on your project..
+Great Now you have this cool vue-easy-notify installed on your project..
 
 ##### Examples
 ```html
@@ -85,7 +85,7 @@ this.$notify.error('This is error messsage!');
 
 ## Server Side Usage
 
-Below is the example how you can use vue-notify to handle laravel server side flash message and errors.
+Below is the example how you can use vue-easy-notify to handle laravel server side flash message and errors.
 
 Install [laracasts/flash](https://github.com/laracasts/flash) composer package.
 
@@ -130,7 +130,7 @@ public function index()
 // resources/js/app.js
 
 import Vue from 'vue'
-import NotifyPlugin from 'vue-notify'
+import NotifyPlugin from 'vue-easy-notify'
 import NotifyMixin from 'vue-easy-notify/src/mixin/notifications'; // this mixin will automatically check server side notfications.
 Vue.use(NotifyPlugin)
 
