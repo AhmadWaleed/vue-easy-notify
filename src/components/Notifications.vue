@@ -60,3 +60,21 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.msg-container {
+  position: fixed;
+  top: 2%;
+  left: 0;
+  width: 100%;
+  z-index: 1000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.msg-container.show-bottom {
+  top: unset;
+  bottom: 2%;
+}
+</style>
