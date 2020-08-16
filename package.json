@@ -1,6 +1,6 @@
 {
   "name": "vue-easy-notify",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "Very simple and minimal vue notification plugin.",
   "author": "Ahmed Waleed <ahmed_waleed1@hotmail.com>",
   "scripts": {
