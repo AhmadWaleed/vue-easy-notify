@@ -53,3 +53,4 @@ const NotificationPlugin = {
 };
 
 export default NotificationPlugin
+export { NotificationPlugin }
