@@ -49,10 +49,10 @@ Use the component:
 
 ```js
 // you can call like this in your component
-this.$notify.info("This is info message.")
+this.$notifyInfo("This is info message.")
 
 // and also 
-Vue.notify.info("Another info message.")
+Vue.prototype.$notifyInfo("Another info message.")
 ```
 
 Great Now you have this cool vue-easy-notify installed on your project..
@@ -64,23 +64,24 @@ Great Now you have this cool vue-easy-notify installed on your project..
 
 ```javascript
 // notify by notification type
-this.$notify.notify({
+this.$notify({
   message: 'Example message.',
   type: 'info' // success, warning, error
 })
 
 // notify with timeout
-this.$notify.notify({
+this.
+({
   message: 'Example message.',
   type: 'success',
   timeout: 3000
 })
 
 // shorthand methods
-this.$notify.info('This is info messsage.');
-this.$notify.success('This is success messsage.');
-this.$notify.warning('This is warning messsage!');
-this.$notify.error('This is error messsage!');
+this.$notifyInfo('This is info messsage.');
+this.$notifySuccess('This is success messsage.');
+this.$notifyWarning('This is warning messsage!');
+this.$notifyError('This is error messsage!');
 ```
 
 ## Server Side Usage
@@ -171,7 +172,7 @@ new Vue({
   el: '#app',
   mixins: [NotifyMixin],
   mounted() {
-    this.$notify.info('show message from client side.')
+    this.$notifyInfo('show message from client side.')
   }
 })
 ```
