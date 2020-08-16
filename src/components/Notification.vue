@@ -111,7 +111,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .fade-enter-active {
   animation: fadeInUp 0.3s ease-out;
 }
@@ -144,62 +144,5 @@ export default {
     -webkit-transform: none;
     transform: none;
   }
-}
-
-.msg {
-  padding: 1rem;
-  margin: 0.25rem 0;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  border-radius: 0.25rem;
-  line-height: calc(0.9rem * 1.5);
-}
-
-.msg svg {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: #fff;
-}
-
-.msg .close-icon {
-  width: 1rem;
-  height: 1rem;
-  fill: #fff;
-  cursor: pointer;
-}
-
-.msg.msg-success {
-  background-color: #68d391;
-}
-
-.msg.msg-info {
-  background-color: #63b3ed;
-}
-
-.msg.msg-error {
-  background-color: #fc8181;
-}
-
-.msg.msg-warning {
-  background-color: #f6ad55;
-}
-
-.msg.msg-sm {
-  width: auto;
-  min-width: 28%;
-  max-width: 80%;
-}
-
-@media (max-width: 1024px) {
-  .msg.msg-sm {
-    min-width: 50%;
-  }
-}
-
-.msg.msg-sm .close-icon {
-  margin: 0 0 0 0.5rem;
 }
 </style>
