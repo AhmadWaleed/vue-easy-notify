@@ -7,7 +7,7 @@
 </p>
 
 ## Introduction
-Vue Notify is very minimal and simple to use plugin available for VueJs, It comes with mixin that you can use to easily integrated your server-service notifications with vue-easy-notify.
+Vue Easy Notify is very minimal and simple to use plugin available for VueJs, It comes with mixin that you can use to easily integrated your server-side notifications with vue-easy-notify.
 
 ---
 
