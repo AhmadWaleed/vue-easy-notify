@@ -128,7 +128,7 @@ public function index()
 </body>
 ```
 
-add and use this plugin in your project to check laravel notifications
+add and use this mixin inside your project to check laravel notifications
 ```js
 // resources/js/mixins/notifications.js
 export default {
