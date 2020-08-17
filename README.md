@@ -37,6 +37,7 @@ Register the plugin:
 ```js
 import Vue from 'vue'
 import NotifyPlugin from 'vue-easy-notify'
+import 'vue-easy-notify/dist/vue-easy-notify.css' // import style
 
 Vue.use(NotifyPlugin)
 ```
