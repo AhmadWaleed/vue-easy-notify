@@ -71,8 +71,7 @@ this.$notify({
 })
 
 // notify with timeout
-this.
-({
+this.$notify({
   message: 'Example message.',
   type: 'success',
   timeout: 3000
